@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  datasource:
+    username: root
+    password: rootroot
+    url: jdbc:mysql://localhost:3306/time-stor
+    driver-class-name: com.mysql.cj.jdbc.Driver
