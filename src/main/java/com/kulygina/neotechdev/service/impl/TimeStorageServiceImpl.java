@@ -41,6 +41,7 @@ public class TimeStorageServiceImpl implements TimeStorageService {
         all.forEach(timeStorage -> System.out.println(timeStorage.getSavedTime()));
     }
 
+    @Override
     public Runnable createEverySecondCachingDataTask() {
         return () -> {
             while (true) {
@@ -56,6 +57,7 @@ public class TimeStorageServiceImpl implements TimeStorageService {
         };
     }
 
+    @Override
     public void tryToSaveEverySecond() {
         while (true) {
             tryToSaveDataInDatabase();
@@ -67,6 +69,7 @@ public class TimeStorageServiceImpl implements TimeStorageService {
         }
     }
 
+    @Override
     public void tryToSaveDataInDatabase() {
         try {
             // We take all elements from our cache at the current moment
